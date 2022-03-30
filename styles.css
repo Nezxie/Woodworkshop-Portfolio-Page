@@ -1,0 +1,52 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    margin:0 ;
+    font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+    /*font-family:Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;*/
+}
+
+.header{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding:1.5rem 0;
+    
+    
+}
+.topContainer{
+    background-color: white;
+    padding: 2rem 0;
+    margin:0 auto;
+    width: 75%;
+    max-width: 1500px;
+}
+.midContainer{
+    color:white;
+    padding:5rem 0;
+    background-image: url(./img/55.JPG);
+    text-align: center;
+}
+.bottomContainer{
+    background-color:white;
+    text-align: center;
+    margin:0 auto;
+    width: 75%;
+    max-width: 1500px;
+    
+
+}
+.contactContainer{
+    display:flex;
+    margin:1rem;
+    text-align: left;
+}
+.contact{
+    
+    width:50%;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+}
