@@ -59,9 +59,18 @@ body{
 }
 .contactContainer{
     display:flex;
-    
     text-align: left;
     justify-content: space-around;
+    
+}
+.left{
+    background-color: #000000;
+    padding: 0 40px 20px 20px;
+    border-radius: 10%;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-self:baseline;
     
 }
 .contact{
@@ -76,6 +85,7 @@ body{
 .gallery{
     display:flex;
     flex:0 1 auto;
+    
 }
 .footer{
     padding:10px;
@@ -99,9 +109,17 @@ h2{
 p{
     font-size: 20px;
 }
+input,
+textarea,
+select{
+    padding:5px;
+    margin:5px 0;
+    border-style:solid;
+    
+}
 #submitButton{
     transition: 0.2s;
-    border:0;
+    border:4px solid rgba(0,0,0,0);
     background-color: rgb(255, 200, 0);
     padding: 10px 30px;
     margin-top: 10px;
@@ -115,11 +133,25 @@ img:hover{
     cursor:pointer;
     
 }
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:rgb(255, 200, 0);
+    outline: none;
+    /* THIS IS GOLD, REMEMBER THIS, THIS STUPID BLUE BORDER ON ACTIVE
+    BOX IS CALLED OUTLINE. OUTLINE!!!! */
+}
 #submitButton:hover{
-    scale:1.05;
+    border: 4px solid rgb(255, 200, 0);
+    background: rgb(255, 255, 255);
     cursor:pointer;
 }
 #language:hover{
     cursor:pointer;
 
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 200, 0);
+    
 }
