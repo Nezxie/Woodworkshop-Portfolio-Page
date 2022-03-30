@@ -14,7 +14,7 @@ body{
 .midText,
 .bottomContainer{
     width: 70%;
-    max-width: 1200px;
+
     margin: 0 auto;
 }
 .header{
@@ -85,6 +85,8 @@ body{
 .gallery{
     display:flex;
     flex:0 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
     
 }
 .footer{
@@ -95,7 +97,8 @@ body{
 }
 
 img{
-    width: 30%;
+    width: 15%;
+    min-width: 0.3vw;
     margin:10px;
     border-radius: 20%;
     transition: 0.2s;
