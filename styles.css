@@ -1,7 +1,10 @@
 html{
     font-size: 16px;
     letter-spacing: .05rem;
+    --accentColor:255, 200, 0; /*yellow first rgb(255, 200, 0) */
+    --gradient:rgba(var(--accentColor), 0.3);
     
+
 }
 
 body{
@@ -13,19 +16,21 @@ body{
 .topContainer,
 .midText,
 .bottomContainer{
-    width: 70%;
-
+    width: 65vw;
     margin: 0 auto;
 }
 .header{
+    display:flex;
     background-color: black;
     color:white;
     text-align: center;
     padding:1.5rem 0;
+    justify-content: center;
 
     
     
 }
+
 .topContainer{
     background-color: white;
     padding: 2rem 0;
@@ -35,7 +40,7 @@ body{
 .midContainer{
     color:white;
     padding:15rem 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(255, 200, 0, 0.5)) , url(./img/55.JPG);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),var(--gradient) ), url(./img/55.JPG);
     background-position: center;
     background-repeat:no-repeat; 
     
@@ -95,16 +100,21 @@ body{
     color:white;
     background-color: black;
 }
+.gallery a{
+   width: 15%; 
 
-img{
-    width: 15%;
-    min-width: 0.3vw;
     margin:10px;
+}
+img{
+    scale:1;
+    width: 100%;
     border-radius: 20%;
+    border:4px solid rgba(0,0,0,0);
     transition: 0.2s;
 }
 h1{
     font-size: 6vmin;
+    /*has some inline style in products.html, sorry! */
 }
 h2{
     font-size: 4vmin;
@@ -123,7 +133,7 @@ select{
 #submitButton{
     transition: 0.2s;
     border:4px solid rgba(0,0,0,0);
-    background-color: rgb(255, 200, 0);
+    background-color: rgb(var(--accentColor));
     padding: 10px 30px;
     margin-top: 10px;
     align-self: flex-end;
@@ -131,21 +141,24 @@ select{
 .midText:hover{
     scale: 1.2;
 }
-img:hover{
+img:hover
+,img:target{
     scale:1.1;
     cursor:pointer;
+    border-color: rgb(var(--accentColor));
+
     
 }
 input:focus,
 textarea:focus,
 select:focus{
-    border-color:rgb(255, 200, 0);
+    border-color:rgb(var(--accentColor));
     outline: none;
     /* THIS IS GOLD, REMEMBER THIS, THIS STUPID BLUE BORDER ON ACTIVE
     BOX IS CALLED OUTLINE. OUTLINE!!!! */
 }
 #submitButton:hover{
-    border: 4px solid rgb(255, 200, 0);
+    border: 4px solid rgb(var(--accentColor));
     background: rgb(255, 255, 255);
     cursor:pointer;
 }
@@ -155,6 +168,103 @@ select:focus{
 }
 a{
     text-decoration: none;
-    color: rgb(255, 200, 0);
+    color: rgb(var(--accentColor));
     
 }
+img.logo,
+img.logo:hover{
+    cursor:auto;
+    scale: 1;
+    border:none;
+    width: 10vmin;
+    height: 10vmin;
+    margin:2em;
+    border-radius: 50%;
+    min-width: 50px;
+/*have some inline style in products.html, sorry but i don't want to make 2 stylesheets */
+
+}
+.polaroid img{
+    width: 90%;
+    align-self: center;
+    margin-top: 6px;
+}
+.polaroid img:hover{
+    border:4px solid rgba(0,0,0,0);
+    scale: 1;
+}
+.polaroid {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin:1em 1em 2em 1em;
+  }
+  
+.container {
+    text-align: center;
+    padding: 10px 20px;
+  }
+.gallery{
+    display: flex;
+    justify-content: center;
+}
+#cat1,
+#cat2,
+#cat3{
+    text-align: center;
+}
+
+.menu{
+    width: 90vw;
+    margin-left: 5vw;
+    
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.menu li{
+    margin-top:-3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: .7rem 3rem;
+    background-color: rgb(var(--accentColor));
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow:0 0 1.25rem .25rem rgba(0, 0, 0,0.25);
+    
+    color: rgb(0, 0, 0);
+}
+.menu li:hover{
+    box-shadow: inset 0 0 1.25rem .25rem rgba(0, 0, 0,0.10),
+    0 0 1.25rem .25rem rgba(0, 0, 0,0.25);
+}
+@media screen and (max-width: 700px)  {
+    .polaroid{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 900px)  {
+    .menu{
+        margin-left: 0px;
+        width: 100%;
+    
+    }
+    .menu ul{
+        flex-direction: column;
+        margin-top: 0;
+        align-items: stretch;
+    }
+    .menu li{
+        margin:0px;
+        margin-left: -3rem;
+        font-size: 1rem;
+        box-shadow:none;
+        border-bottom: 2px solid black ;
+    
+    }
+    
+  }
