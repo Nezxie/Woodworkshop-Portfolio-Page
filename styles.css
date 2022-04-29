@@ -15,6 +15,12 @@ body{
     /*font-family:Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;*/
 
 }
+.wrapper{
+    background-image: url(./img/44.JPG);
+    background-position: center center;
+    background-size: cover;
+    background-repeat:no-repeat; 
+}
 
 .topContainer,
 .midText,
@@ -35,25 +41,26 @@ body{
 }
 
 .topContainer{
-    background-color: white;
+
     padding: 2rem 0;
    
 }
 
+/*zmiana tła*/
 .midContainer{
     color:white;
-    padding:12rem 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),var(--gradient) ), url(./img/55.JPG);
-    background-position: center;
+    padding:5rem 0;/*
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),var(--gradient),rgba(255,255,255) 95% ), url(./img/44.JPG);
+    background-position: center center;
+    background-size: cover;
     background-repeat:no-repeat; 
-
+*/
     
     
     text-align: center;
     font-weight: bolder;
     margin-bottom: 20px;
-    background-size:cover;
-    background-color: #000000; 
+ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,9 +75,8 @@ body{
     width: 55vw;
 }
 
-
 .bottomContainer{
-    background-color:rgb(255, 255, 255);
+
     text-align: center;
     margin-bottom: 20px;
     
@@ -83,6 +89,7 @@ body{
 }
 .left{
     background-color: #000000;
+    margin-top: 0;
     width: 100%;
     padding: .5rem 2rem;
     border-radius: 2em;
@@ -210,6 +217,7 @@ img.logo:hover{
     flex-direction: column;
     width: 30vw;
     background-color: white;
+    border-radius: 1em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin:1em 1em 2em 1em;
   }
@@ -277,6 +285,12 @@ img.logo:hover{
 }
 .polaroid img:hover{
     cursor: default;
+}
+p.midText{
+    padding: 1.5em;
+    border-radius: 1em;
+    
+   background-image: radial-gradient(circle at 50%,rgba(0, 0, 0,.5),rgba(0, 0, 0,0.3) 80%,rgba(0, 0, 0, 0)); 
 }
 @media screen and (max-width: 700px)  {
     .polaroid{
