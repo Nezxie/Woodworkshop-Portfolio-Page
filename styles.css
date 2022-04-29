@@ -1,8 +1,10 @@
 html{
     font-size: 16px;
     letter-spacing: .05rem;
-    --accentColor:255, 200, 0; /*yellow first rgb(255, 200, 0) */
+    --accentColor:255,255,255; /*orange-yellow 255, 200, 0 |light blue 135, 205, 255|dark blue 67, 146, 204 | red 255, 87, 84|*/
     --gradient:rgba(var(--accentColor), 0.3);
+    --linkColor:255, 255, 0;
+    --buttontext:0,0,0;
     
 
 }
@@ -13,10 +15,11 @@ body{
     /*font-family:Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;*/
 
 }
+
 .topContainer,
 .midText,
 .bottomContainer{
-    width: 65vw;
+    width: 55vw;
     margin: 0 auto;
 }
 .header{
@@ -24,7 +27,7 @@ body{
     background-color: black;
     color:white;
     text-align: center;
-    padding:1.5rem 0;
+    padding:0 0;
     justify-content: center;
 
     
@@ -39,10 +42,11 @@ body{
 
 .midContainer{
     color:white;
-    padding:15rem 0;
+    padding:12rem 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),var(--gradient) ), url(./img/55.JPG);
     background-position: center;
     background-repeat:no-repeat; 
+
     
     
     text-align: center;
@@ -50,12 +54,21 @@ body{
     margin-bottom: 20px;
     background-size:cover;
     background-color: #000000; 
-    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   
 }
-.midText{
-    transition: 1s;
+.midContainer .wowNextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
 }
+
+
 .bottomContainer{
     background-color:rgb(255, 255, 255);
     text-align: center;
@@ -70,8 +83,9 @@ body{
 }
 .left{
     background-color: #000000;
-    padding: 0 40px 20px 20px;
-    border-radius: 10%;
+    width: 100%;
+    padding: .5rem 2rem;
+    border-radius: 2em;
     color:white;
     display:flex;
     flex-direction: column;
@@ -113,7 +127,7 @@ img{
     transition: 0.2s;
 }
 h1{
-    font-size: 6vmin;
+    font-size: 5.5vmin;
     /*has some inline style in products.html, sorry! */
 }
 h2{
@@ -138,9 +152,7 @@ select{
     margin-top: 10px;
     align-self: flex-end;
 }
-.midText:hover{
-    scale: 1.2;
-}
+
 img:hover
 ,img:target{
     scale:1.1;
@@ -168,7 +180,7 @@ select:focus{
 }
 a{
     text-decoration: none;
-    color: rgb(var(--accentColor));
+    color: rgb(var(--linkColor));
     
 }
 img.logo,
@@ -176,8 +188,8 @@ img.logo:hover{
     cursor:auto;
     scale: 1;
     border:none;
-    width: 10vmin;
-    height: 10vmin;
+    width: 8vmin;
+    height: 8vmin;
     margin:2em;
     border-radius: 50%;
     min-width: 50px;
@@ -227,24 +239,51 @@ img.logo:hover{
     justify-content: center;
 }
 .menu li{
-    margin-top:-3rem;
+    margin-top:.5rem;
     font-weight: bold;
     font-size: 1.5rem;
     padding: .7rem 3rem;
     background-color: rgb(var(--accentColor));
     margin-left: 10px;
     margin-right: 10px;
-    box-shadow:0 0 1.25rem .25rem rgba(0, 0, 0,0.25);
+    box-shadow:0 5px 1rem .05rem rgba(0, 0, 0,0.15);
+    border-radius: 1em;
     
-    color: rgb(0, 0, 0);
+    color: rgb(var(--buttontext));
 }
 .menu li:hover{
     box-shadow: inset 0 0 1.25rem .25rem rgba(0, 0, 0,0.10),
-    0 0 1.25rem .25rem rgba(0, 0, 0,0.25);
+    0 5px 1rem .05rem rgba(0, 0, 0,0.15);
+}
+
+#products-button{
+    display:block;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(var(--accentColor));
+    color: rgb(var(--buttontext));
+    padding: 1em 3em;
+    border-radius: 1em;  
+    margin-top: 3rem;
+    align-self: flex-end;
+
+      
+}
+#products-button:hover,
+#products-button:target{
+    outline: 4px solid rgb(var(--accentColor));
+    background-color: rgba(var(--accentColor),0);
+    color: rgb(var(--accentColor));
+}
+.polaroid img:hover{
+    cursor: default;
 }
 @media screen and (max-width: 700px)  {
     .polaroid{
         width: 90%;
+    }
+    #products-button{
+     align-self: center;
     }
 }
 @media screen and (max-width: 900px)  {
@@ -264,6 +303,7 @@ img.logo:hover{
         font-size: 1rem;
         box-shadow:none;
         border-bottom: 2px solid black ;
+        border-radius: 0px;
     
     }
     
