@@ -9,17 +9,17 @@ html{
 
 }
 
+
 body{
     margin:0 ;
-    font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+    font-family:Verdana,sans-serif; 
     /*font-family:Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;*/
 
 }
 .wrapper{
-    background-image: url(./img/55.JPG);
-    background-position: center center;
-    background-size: cover;
-    background-repeat:no-repeat; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(./img/55.JPG);
+    background-size: contain;
+    background-repeat:repeat; 
 }
 
 .topContainer,
@@ -28,6 +28,9 @@ body{
     width: 55vw;
     margin: 0 auto;
 }
+h1,h2,h3{
+    font-family: 'Lobster', cursive;
+}
 .header{
     display:flex;
     background-color: black;
@@ -35,6 +38,7 @@ body{
     text-align: center;
     padding:0 0;
     justify-content: center;
+
 
     
     
@@ -49,7 +53,7 @@ body{
 /*zmiana tła*/
 .midContainer{
     color:white;
-    padding:5rem 0;/*
+    padding:10rem 0;/*
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),var(--gradient),rgba(255,255,255) 95% ), url(./img/44.JPG);
     background-position: center center;
     background-size: cover;
@@ -143,6 +147,7 @@ h2{
 p{
     font-size: 20px;
 }
+
 input,
 textarea,
 select{
@@ -254,14 +259,14 @@ img.logo:hover{
     background-color: rgb(var(--accentColor));
     margin-left: 10px;
     margin-right: 10px;
-    box-shadow:0 5px 1rem .05rem rgba(0, 0, 0,0.15);
     border-radius: 1em;
     
     color: rgb(var(--buttontext));
 }
 .menu li:hover{
-    box-shadow: inset 0 0 1.25rem .25rem rgba(0, 0, 0,0.10),
-    0 5px 1rem .05rem rgba(0, 0, 0,0.15);
+    background-color: rgba(0,0,0,0);
+    outline: 4px solid rgb(var(--accentColor)) ;
+    color: rgb(var(--accentColor));
 }
 
 #products-button{
@@ -292,6 +297,18 @@ p.midText{
     
    background-image: radial-gradient(circle at 50%,rgba(0, 0, 0,.5),rgba(0, 0, 0,0.3) 80%,rgba(0, 0, 0, 0)); 
 }
+#topP{
+     
+    color: #FFF;
+    font-weight: bolder;
+}
+#cat1 h2,
+#cat2 h2,
+#cat3 h2{
+    color: #FFF;
+}
+
+
 @media screen and (max-width: 700px)  {
     .polaroid{
         width: 90%;
